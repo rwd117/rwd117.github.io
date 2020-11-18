@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 700px;
+            border: 2px solid;
+        }
+        .box{
+            width: 30px;
+            height: 50px;
+            background-color: yellowgreen;
+            margin: 10px;
+            transition-duration: 1s;
+        }
+
+        #wrap:hover .box{
+            width: 690px;
+        }
+
+        #wrap .box:nth-child(1){
+            transition-timing-function: ease;
+            background-color: turquoise;
+        }
+
+        
+        #wrap .box:nth-child(2){
+            /* transition-timing-function: ease-in;
+            background-color: burlywood;
+            border: 2px solid red;
+            opacity: 0.5;
+            transition-duration: background-color, ;
+            transition-delay: 0.5s; */
+            background-color: tan;
+            transition: width, 1s 0.5s;
+        }
+
+        
+        #wrap .box:nth-child(3){
+            transition-timing-function: ease-out;
+            background-color: slateblue;
+            transition-delay: 1s;
+        }
+
+        #wrap .box:nth-child(4){
+            transition-timing-function: ease-in-out;
+            background-color: slateblue;
+        }
+
+        #wrap .box:nth-child(5){
+            transition-timing-function: linear;
+            background-color: steelblue;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">b1</div>
+        <div class="box">b2</div>
+        <div class="box">b3</div>
+        <div class="box">b4</div>
+        <div class="box">b5</div>
+    </div>
+</body>
+</html>

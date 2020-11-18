@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(#113322,#109988);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            animation-name: ani;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 100;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+        #wrap:hover{
+            animation-play-state: paused;
+        }
+        @keyframes ani{
+            0%{
+                left: 0;
+                transform: rotate(0);
+            }
+            100%{
+                left: 1000px;
+                transform: rotate(720deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">anim</div>
+</body>
+</html>

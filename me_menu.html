@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit  ;
+        }
+
+        ul li a{
+            height: 50px;
+            background-color: yellowgreen;
+            border-top: 1px solid #dddddd;
+            line-height: 50px;
+            font-size: 1.3rem;
+            display: block;
+        }
+
+        @media screen and (min-width: 600px){
+            ul li{
+                float: left;
+                width: 50%;
+            }
+
+            ul li:last-child{
+                width: 100%;
+            }
+
+            ul li a{
+                border-left: 1px solid black;
+                border-right: 1px solid green;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            ul li{
+                float: left;
+                width: 20%;
+            }
+            ul li:last-child{
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>
+</body>
+</html>

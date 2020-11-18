@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="check.js"></script>
+    <script>
+        function check(a){
+            if(!isID(a.id)){
+                alert("id가")
+                return false;
+            }
+            if(isNull(a.pwd,"암호 입력좀;;")){
+                
+                return false;
+            }
+            if(isNumber(a.name)){
+                alert("이름에 숫자, 공백이?!")
+                return false;
+            }
+            if(isNull(a.name,"?")){
+                return false;
+            }
+            if(!isEmail(a.mail)){
+                alert("메일이?!")
+                return false;
+            }
+            
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+    <form action="result.html" method="get" name="form1" onsubmit="return check(this);">
+        <label>id</label><input type="text" name="id"/><br/>
+        <label>pw</label><input type="text" name="pwd"/><br/>
+        <label>name</label><input type="text" name="name"><br/>
+        <label>email</label><input type="text" name="mail"><br/>
+        <input type="submit" value="전송"/>
+        <input type="reset" value="취소"/>
+</body>
+</html>

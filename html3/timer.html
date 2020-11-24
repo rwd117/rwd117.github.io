@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            // var timing=setTimeout(function(){
+            //     for(var i=0;i<10;i++){
+            //         for(var y=0;y<10;y++){
+            //             var a=i*y;
+            //             $('#box').text(a)
+            //         }
+            //     }           
+            // },1000);
+            // clearTimeout(timing);
+            var x=1;
+            var y=0;
+            var count=0;
+            var timing2=setInterval(function(){
+                y++;
+                
+                var a=x*y;
+                
+                if(y==9){
+                    x++;
+                    y=0;
+                 }
+
+                $('#box').text(a);
+            },1000);
+            
+
+            $('button').click(function(){
+                clearInterval(timing2)
+            })
+
+        });
+    </script>
+    <style>
+        #box{
+            width: 600px;
+            height: 200px;
+            border: 4px solid;
+            line-height: 200px;
+            text-align: center;
+        }
+        #box2{
+            width: 200px;
+            height: 200px;
+            border: 4px solid;
+            line-height: 200px;
+            font-size: 2em;
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box2"></div>
+    <button>노우~~~</button>
+</body>
+</html>

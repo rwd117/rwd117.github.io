@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리 선택자</title>
+    <style>
+        table {border-collapse:collapse;}
+        th, td {
+            width:100px; height:40px;
+            border:1px solid #ddd;
+            box-sizing:border-box;
+        }
+    </style>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('tr:odd').css({
+                backgroundColor:'yellowgreen'
+            });
+            console.log($('tr'));
+        });
+        
+        $(function(){
+            $('tr:even').css({
+                backgroundColor:'#ddd'
+            });
+            console.log($('tr'));
+        });
+
+        $(function(){
+            $('tr:gt(3)').css({
+                border : '2px solid'
+            });
+            console.log($('tr'));
+        });
+
+        
+        $(function(){
+            $('tr:lt(3)').css({
+                border : '2px dotted'
+            });
+            console.log($('tr'));
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>성명</th>
+            <th>성별</th>
+            <th>나이</th>
+            <th>사는곳</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>남</td>
+            <td>41</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>김갑순</td>
+            <td>여</td>
+            <td>41</td>
+            <td>서울</td>
+        </tr>
+         <tr>
+            <td>이수일</td>
+            <td>남</td>
+            <td>41</td>
+            <td>부산</td>
+        </tr>
+        <tr>
+            <td>심순애</td>
+            <td>여</td>
+            <td>41</td>
+            <td>대구</td>
+        </tr>
+        <tr>
+            <td>조판서</td>
+            <td>여</td>
+            <td>41</td>
+            <td>제주</td>
+        </tr>
+    </table>
+</body>
+</html>

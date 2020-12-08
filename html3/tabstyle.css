@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    color: #333;
+    font-family: "Bahnschrift", sans-serif;
+}
+.tabarea{
+    width: 620px;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    margin: 100px;
+    overflow: hidden;
+    position: relative;
+
+}
+.tablist{
+    width: 620px;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.tablist > li {
+    width: 140px;
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+.tablist > li > .tabbtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+}
+/* 
+.tablist > li > .tabbtn:hover{
+    background: #ddd;
+    /* padding-bottom: 1px; 
+} */
+
+.tablist > li > .tabbtn.on{
+    background: red;
+    padding-bottom: 1px;
+}
+
+.tabcon{
+    position: absolute;
+    top: 51px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 25px 30px;
+    background: #fff;
+}
+
+.notice ul li{
+    line-height: 32px;
+    position: relative;
+}
+.notice ul li a{
+    display: block;
+    padding-right: 120px;
+}
+
+.notice ul li a:hover{
+    text-decoration: underline;
+}
+
+.notice ul li span{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tabcon .btnmore{
+    position: absolute;
+    top: -32px;
+    right: 30px;
+    font-size: 14px;
+}

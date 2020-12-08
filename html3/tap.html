@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="tabstyle.css" rel="stylesheet">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            var $tabbtn=$('.tabarea .tabbtn');
+            var $tabcon=$('.tabarea .tabcon');
+            $tabbtn.click(function(e){
+                e.preventDefault();
+                $tabbtn.removeClass('on');
+                $(this).addClass('on');
+                $tabcon.hide();
+                $(this).next('.tabcon').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="tabarea">
+        <ul class="tablist">
+            <li>
+                <a href="#" class="tabbtn">rw</a>
+                <div class="tabcon notice">
+                    <ul>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btnmore">++</a>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="tabbtn">rwd</a>
+                <div class="tabcon notice">
+                    <ul>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com">ㄱㅈㅅㅎ</a>
+                            <span>20-12-01</span>
+                        </li>
+                        
+                    </ul>
+                    <a href="#" class="btnmore">++</a>
+                </div>
+            </li><li>
+                <a href="#" class="tabbtn">rwe</a>
+                <div class="tabcon notice">
+                    <ul>
+                        <li>
+                            <a href="http://www.naver.com"></a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com"></a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com"></a>
+                            <span>20-12-01</span>
+                        </li>
+                        <li>
+                            <a href="http://www.naver.com"></a>
+                            <span>20-12-01</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btnmore">++</a>
+                </div>
+            </li><li>
+                <a href="#" class="tabbtn">rwf</a>
+                <div class="tabcon notice">
+                    <ul>
+                        <li>
+                            <a href="http://www.naver.com"></a>
+                            <span>20-12-01</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btnmore">++</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    
+</body>
+</html>

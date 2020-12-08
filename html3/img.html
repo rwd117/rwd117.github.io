@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="imgslide.css" rel="stylesheet">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#wrap ul').css({
+                width : $('#wrap ul li').length*320
+            });
+            
+            $('#wrap ul').prepend($('#wrap ul li:last')).css({
+                marginLeft :-320
+            });
+            
+            $('.prev').click(function(){
+                $('#wrap ul').animate({marginLeft:0},function(){
+                    $('#wrap ul').prepend($('#wrap ul li:last')).css({marginLeft:-320});
+                });
+            });
+
+            $('.next').click(function(){
+                $('#wrap ul').animate({marginLeft:-640},function(){
+                    $('#wrap ul').append($('#wrap ul li:first')).css({marginLeft:-320});
+                });
+            });
+            
+            setInterval(function(){
+                $('.next').click();
+            },2000)
+
+        });
+
+    </script>
+</head>
+<body>
+    <div id="slide">
+        <div id="wrap">
+            <ul>
+                <li><img src="img1/food1.jpg"></li>
+                <li><img src="img1/food2.jpg"></li>
+                <li><img src="img1/food3.jpg"></li>
+            </ul>
+        </div>
+        <p class="prev"><img src="img1/btn_prev.png" alt="이전으로"></p>
+        <p class="next"><img src="img1/btn_next.png" alt="다음으로"></p>
+    </div>
+   
+</body>
+</html>

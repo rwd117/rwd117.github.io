@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.show').click(function(){
+                $('#target').slideUp(1000);
+            });
+            $('.hide').click(function(){
+                $('#target').slideDown(1000,'easeOutElastic');
+            });
+            $('toggle').click(function(){
+                $('#target').slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="target">
+        <img src="img1/food1.jpg">
+    </div>
+    <div>
+        <button class="show">ㄱ</button>
+        <button class="hide">no</button>
+        <button class="toggle">ㄱ</button>
+    </div>
+</body>
+</html>

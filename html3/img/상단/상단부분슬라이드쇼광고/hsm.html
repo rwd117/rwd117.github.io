@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('.mainMenu').mouseenter(function(){
+                $('header').stop().animate({height:'316px'},500);
+            }).mouseleave(function(){
+                $('header').stop().animate({height:'80px'},500);
+            });
+        });
+
+        $(function(){
+            $('button').click(function(){
+                $('aside').toggleClass('open');
+                if($('aside').hasClass('open')){
+                    $('aside').stop().animate({
+                        right : 0
+                    },500,'easeInQuad');
+                    $('button').find('img').attr({
+                        'src': './img (2) (3)/btn_close.png'
+                    });
+                }
+                else {
+                    $('aside').stop().animate({
+                        right : '-220px'
+                    },500,'easeOutQuad');
+                    $('button').find('img').attr({
+                        'src': './img (2) (3)/btn_open.png'
+                    });
+                }
+            });
+        })
+
+    </script>
+    <link href="submenu.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="#"><img src="img (2)/logo.png" alt="나 배고파"></a></h1>
+            <nav>
+                <ul>
+                    <li class="mainMenu"><a href="#">배고프다고</a>
+                        <ul class="subMenu">    
+                            <li><a href="#">인사</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직구성</a></li>
+                            <li><a href="#">연구개발</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu"><a href="#">투자정보</a>
+                        <ul class="subMenu">  
+                            <li><a href="#">일식</a></li>
+                            <li><a href="#">중식</a></li>
+                            <li><a href="#">한식</a></li>
+                            <li><a href="#">인도식</a></li>
+                            <li><a href="#">아메리카식</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu"><a href="#">배고프다고2</a>
+                        <ul class="subMenu">   
+                            <li><a href="#">여기소식</a></li>
+                            <li><a href="#">저기 소식</a></li>
+                            <li><a href="#">수상실적</a></li>
+                            <li><a href="#">이열~</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu"><a href="#">배고프다고3</a>
+                        <ul class="subMenu">   
+                            <li><a href="#">저기 홍보</a></li>
+                            <li><a href="#">여기 홍보</a></li>
+                            <li><a href="#">저멀 홍보</a></li>
+                            <li><a href="#">홍보 안함</a></li>
+                            <li><a href="#">배고프다</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu"><a href="#">채용</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="main">
+        <img src="./img (2)/main_visual.jpg" alt="어우 건설"/>
+    </div>
+    <aside>
+        <a href="#"><img src="./img (2) (3)/photo_review.jpg" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="#">ㄱㅈ</a></li>
+                <li><a href="#">ㄲㅈ</a></li>
+                <li><a href="#">ㄱㅉ</a></li>
+                <li><a href="#">ㄲㅉ</a></li>
+            </ul>
+        </nav>
+        <button><img src="./img (2) (3)/btn_open.png" alt="open"></button>
+    </aside>
+</body>
+</html>

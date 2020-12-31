@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style123.css" rel="stylesheet">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.item').mouseover(function(){
+                $(this).find('p, span').stop().animate({
+                    opacity : 1
+                },100);
+                $(this).find('img').css({
+                    transform:'scale(1.1)',
+                    transition:'0.7s'
+                });
+            }).mouseout(function(){
+                $(this).find('p, span').stop().animate({
+                    opacity : 0
+                },100);
+                $(this).find('img').css({
+                    transform:'scale(1)',
+                    transition:'0.7s'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="item">
+            <img src="./a01.jpg">
+            <p>img1</p>
+            <span></span>
+        </div>
+    </div>
+    <div id="wrap">
+        <div class="item">
+            <img src="./a02.jpg">
+            <p>img2</p>
+            <span></span>
+        </div>
+    </div>
+    <div id="wrap">
+        <div class="item">
+            <img src="./a03.jpg">
+            <p>img3</p>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

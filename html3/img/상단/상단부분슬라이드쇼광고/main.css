@@ -1,0 +1,88 @@
+@charset "utg-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+div{
+    display: block;
+}
+
+section{
+    display: block;
+}
+
+header{
+    width: 1400px;
+    height: 700px;
+    margin: 0 auto;
+}
+footer{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+
+.main{
+    width: 1400px;
+    height: 1235px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    position: relative;
+}
+
+.main nav{
+    float: right;
+}
+
+.main nav li{
+    float: left;
+}
+
+.main nav li .mainkind{
+    width: 1390px;
+    height: 398px;
+    display: block;
+    margin: 5px;
+    line-height: 65px;
+    border: 1px solid #000000;
+}
+
+.main nav ul li .mainkind .kindkind{
+    width: 295px;
+    height: 300px;
+    border: 1px solid #000000;
+    margin: 5px 15px 5px 30px;
+    overflow: hidden;
+}
+
+.main nav ul li .mainkind .kindkind img{
+    width: 290px;
+    height: 175px;
+
+}
+.main nav ul li .mainkind .kindkind .setumei{
+    width: 285px;
+    height: 15px;
+}
+.main nav ul li .mainkind .kindkind .setumei span{
+    width: 285px;
+    height: 15px;
+    font-size: 13px;
+}
+
+.main nav ul li .mainkind span .title{
+    font-weight: bold;
+    font-size: 30px;
+}

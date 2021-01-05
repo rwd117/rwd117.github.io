@@ -19,7 +19,6 @@ ctx.fillRect(0,0,CANVAS_SIZE,CANVAS_SIZE);
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 
-
 let painting = false;
 let filling = false;
 

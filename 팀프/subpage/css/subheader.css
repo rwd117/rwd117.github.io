@@ -111,7 +111,7 @@ header.sticky nav{
 
 
 header .category label.sss{
-    background: url(img/hamburger.png) no-repeat;
+    background: url(../img/hamburger.png) no-repeat;
     width: 60px;
     height: 40px;
     position: absolute;
@@ -164,7 +164,7 @@ header .category label.sss{
     /* margin: 0 auto; */
     background-color: white;
     top: 0;
-    left: -950px;
+    left: -9999px;
     transition: all .5s;
     z-index: 5;
 }

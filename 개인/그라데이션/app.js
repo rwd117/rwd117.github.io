@@ -1,25 +1,36 @@
 const canvas = document.getElementById("jscanvas");
 const ctx= canvas.getContext("2d");
-const dx = 2;
-const dy= -2;
+const ballRadius = 10;
+
 
 let canvasWidth = canvas.width/2;
 let canvasHeight = canvas.height -30;
+let dx = 2;
+let dy= -2;
+
 
 function drawBall() {
     ctx.beginPath();
-    ctx.arc(canvasWidth, canvasHeight, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.arc(canvasWidth, canvasHeight, ballRadius, 0, 2*Math.PI);
+    ctx.fillStyle = "white";
     ctx.fill();
     ctx.closePath();
 }
 
 function draw() {
+   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
+        drawBall();
+
+    if(canvasWidth + dx > canvas.width-ballRadius || canvasWidth + dx < ballRadius) {
+        dx = -dx;
+    }else if(canvasHeight + dy > canvas.height-ballRadius || canvasHeight + dy < ballRadius) {
+        dy = -dy;
+    }
     canvasWidth += dx;
     canvasHeight += dy;
 }
 
 
-setInterval(draw, 10);
+
+setInterval(draw, 20);

@@ -1,3 +1,6 @@
+
+const logo=document.getElementById("jslogo");
+
 let slidewrap = document.querySelector('.sec:nth-of-type(1) .mainslidewrap'),
     slides = document.querySelectorAll('.sec:nth-of-type(1) .mainslidewrap .content'),
     slidecount = slides.length,
@@ -6,7 +9,7 @@ let slidewrap = document.querySelector('.sec:nth-of-type(1) .mainslidewrap'),
     current=0,
     slideWidth =300,
     slidemargin = 50;
-        
+
     slidewrap.style.width= (slideWidth+slidemargin)*slidecount - slidemargin+65 +"px";
 
     function rightclick(){
@@ -105,7 +108,13 @@ let slidewrap2 = document.querySelector('.sec:nth-of-type(3) .mainslidewrap'),
     }
 
 
+    function goMain(){
+        location.href="../mainpage/mainpage.html";
+    }
+
 
     rightbtn2.addEventListener("click",rightclick2);
 
     leftbtn2.addEventListener("click",leftclick2);
+
+    logo.addEventListener("click",goMain);

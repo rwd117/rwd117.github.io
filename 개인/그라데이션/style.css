@@ -6,6 +6,7 @@
 }
 
 body{
+    
     background-color: white;
     font-weight: inherit;
     display: flex;
@@ -17,18 +18,19 @@ body{
 
 
 .box{
-    width: 1500px;
-    height: 750px;
+    width: 500px;
+    height: 500px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 2px 30px rgba(black, .2);
+    overflow: hidden;
     position: relative;
     transform: translate3d(0, 0, 0);
 }
 
 
 .wave {
-    opacity: .4;
+    opacity: 0.2;
     position: absolute;
     top: 3%;
     left: 50%;
@@ -46,6 +48,10 @@ body{
     animation: drift 5000ms infinite linear;
   }
 
+  .thr{
+    animation: drift 7000ms infinite linear;
+    background: greenyellow;
+  }
 
 @keyframes drift {
     from { transform: rotate(0deg); }

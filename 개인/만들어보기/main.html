@@ -12,15 +12,34 @@
 <body>
 <div id="wrap">
     <div class="container">
-        <div class="pad">
-            <div class="btndiv">
-                <button class="leftbtn"></button>
-                <button class="rightbtn"><span>About</span></button>
+        <div class="btndiv" id="jsbtn">
+            <button class="leftbtn" id="jsleft"></button>
+            <button class="rightbtn" id="jsright"><span></span></button>
+        </div>
+        <div class="pad" id="jspad">
+            <div class="content" id="jscontent" >
+                <div class="samplecontent" id="jssamplecontent">
+                    <div class="mycontent">
+                        <div class="menu">
+                            <div class="menuele subone"></div>
+                            <div class="menuele subtwo"></div>
+                            <div class="menuele subthree"></div>
+                            <div class="menuele subfour"></div>
+                            <div class="menuele subfive"></div>                            
+                        </div>
+                    </div>
+                    <div class="mycontent" id="snow">
+                        <canvas id="jscanvas" class="mycanvas">  </canvas>
+                    </div>
+                   
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script src="api.js"></script>
+<script src="snowapi.js"></script>
 </body>
 
 </html>

@@ -19,28 +19,28 @@ function bb(){
       
 let current = 0,
     slideHeight = 1600,
-    slideMargin = 10,
+    slideMargin = 20,
     slidecount=slides.length;    
 
-samplecontent.style.height= (slideHeight+slideMargin)*slidecount - slideMargin+80 +"px";
+samplecontent.style.height= (slideHeight+slideMargin)*slidecount - slideMargin+100 +"px";
 
 function rightclick(){
   
     if(current< slidecount -1){
         moverSlide(current+1);
-        console.log("으아아아ㅏ");
+       // console.log("으아아아ㅏ");
     }
   }
   
 function leftclick(){
     if(current > 0 ){
         moverSlide(current-1);
-        console.log("으아아아ㅏ");
+       // console.log("으아아아ㅏ");
     }
   }
   
 function moverSlide(num){
-    samplecontent.style.top = -num*1050 + "px";
+    samplecontent.style.top = -num*1140 + "px";
     current = num;
 }
 

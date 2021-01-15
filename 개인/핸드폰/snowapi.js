@@ -16,7 +16,7 @@ function snowSet(){
         obj.size=Math.sqrt(Math.random()*50)+1;
         obj.alpha=Math.random();
         snow.push(obj);
-        console.log(obj);    
+     //   console.log(obj);    
         }
         init=true;
     }   

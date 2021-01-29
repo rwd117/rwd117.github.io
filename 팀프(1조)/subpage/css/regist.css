@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+.main{
+    width: 1400px;
+    height: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.main input, .main select{
+    background: #FCF6F5;
+}
+
+.member input:nth-child(n):focus{
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 168, 243);
+    box-shadow: 0 0 3px rgb(0, 168, 243);
+}
+
+.maintitle{
+    margin-top: 100px;
+    display: inline-flex;
+}
+
+.maintitle img{
+    width: 180px;
+    height: 40px;
+}
+
+.main .member{
+    margin: 30px auto;
+    width: 510px;
+    position: relative;
+}
+.member .labeldiv{
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.member input{
+    width: 500px;
+    height: 40px;
+    font-size: 1.1rem;
+    padding-left: 55px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.member:last-child{
+    height: 80px;
+}
+
+.member:last-child select{
+    width: 150px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.member:last-child input{
+    width: 160px;
+    height: 30px;
+}
+
+.member:last-child #NewMem, .member:last-child #Cancle{
+    width: 500px;
+    height: 40px;
+}
+
+.member:last-child #NewMem{
+    outline: none;
+    cursor: pointer;
+    background: rgb(0, 168, 243) ;
+    color: #FCF6F5;
+    box-shadow: none;
+}
+
+.member button:nth-child(2n+1){
+    background: rgb(0, 168, 243) ;
+    opacity: 0.8;
+    color: #FCF6F5;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    outline: none;
+    font-size: 20px;
+    border:  rgb(0, 168, 243) ;;
+}
+
+
+.member button:nth-child(2n+1):hover{
+    background: #00203F ;
+    opacity: 0.8;
+    color: #FCF6F5;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    outline: none;
+    font-size: 20px;
+    border: #00203F ;
+}
+
+.member button:nth-child(2n+1):active{
+    transform: scale(0.9);
+}
+
+.member button:nth-child(2n){
+    background: #FCF6F5 ;
+    color: rgb(0, 168, 243);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    outline: none;
+    font-size: 20px;
+    border: #FCF6F5;
+}
+
+
+.member button:nth-child(2n):hover{
+    background: #00203F ;
+    color: rgb(0, 168, 243);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    outline: none;
+    font-size: 20px;
+    border:  #00203F ;
+}
+
+
+.member button:nth-child(2n):active{
+    transform: scale(0.9);
+}
+
+.member .fa{
+    position: absolute;
+    top: 33px;
+    left: 6px;
+    color: gray;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .member input:focus::placeholder{
+    visibility: hidden;
+  }
+  

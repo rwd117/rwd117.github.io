@@ -1,0 +1,129 @@
+/* Google Web Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+Fontawesome 4.7
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+
+body{
+  font-family: 'Montserrat',sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  width: 500px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* height: 100vh; */
+  margin-top: 200px;
+}
+.container1{
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.item{
+  width: 300px;
+  /* border: 1px solid red; */
+  margin-bottom: 10px;
+  position: relative;
+}
+/*
+.item input[type=text],
+.item input[type=email],
+.item input[type=tel]{
+
+} 이렇게해도됨 
+*/
+.item input{
+  border: 1px solid lightgray;
+  height: 40px;
+  width: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  outline: none;
+  transition: 0.3s;
+}
+.item .fa{
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gray;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  /* background-color: black; */
+  /* border: 1px solid blue; */
+  line-height: 40px;
+  text-align: center;
+  transition: 0.3s;
+}
+.item input:focus{
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+/* 위에 인접하는 것은 선택불가 무조건 아래에 인접하는 것만 가능 */
+.item input:focus + .fa{
+  color: dodgerblue;
+}
+.item input:focus::placeholder{
+  visibility: hidden;
+}
+
+
+
+.item1{
+  width: 300px;
+  /* border: 1px solid red; */
+  margin-bottom: 10px;
+  position: relative;
+}
+.item1 input{
+  height: 40px;
+  border: 1px solid lightgray;
+  width: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  outline: none;
+  transition: 0.3s;
+}
+.item1 .fa{
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  /* border: 1px solid blue; */
+  border-radius: 5px 0 0 5px;
+  line-height: 40px;
+  text-align: center;
+  transition: 0.3s;
+}
+.item1 input:focus{
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+/* 위에 인접하는 것은 선택불가 무조건 아래에 인접하는 것만 가능 */
+.item1 input:focus + .fa{
+  background-color: dodgerblue;
+}
+.item1 input:focus::placeholder{
+  visibility: hidden;
+}

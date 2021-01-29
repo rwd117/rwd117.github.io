@@ -1,0 +1,233 @@
+
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+    color: inherit;
+}
+header{
+    width: 1400px;
+    margin: 0 auto;
+    height: 65px;
+    z-index: 99;
+}
+
+header .category{
+    width: 1400px;
+    margin: 0 auto;
+}
+header .category nav{
+    width: 700px;
+    float: right;
+}
+header h1{
+    float: left;
+    margin-top: 15.5px;
+    margin-left: 50px;
+}
+header nav {
+    float: right;
+}
+header nav li {
+    display: block;
+    float: left;
+}
+header nav li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 65px;
+}
+header nav li a:hover{
+    color: rgb(0, 168, 243);
+}
+header nav{
+    display: none;
+}
+header .subsearch input{
+    float: left;
+    width: 500px;
+    height: 25px;
+    margin-top: 17px;
+    margin-left: 300px;
+    border-radius: 10px;
+}
+header .subsearch img{
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 10px;
+}
+header .member{
+    width: 300px;
+    margin-left: 1100px;
+    float: right;
+    position: absolute;
+}
+header .member li{
+    display: block;
+    float: right;
+}
+header .member li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 65px;
+}
+header .member li a:hover{
+    color: rgb(0, 168, 243);
+}
+header.sticky{
+    width: 100%;
+    height: 65px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 90; 번호가 높을수록 윗면 */
+    background-color: #fff;
+}
+header.sticky .subsearch{
+    display: inherit;
+}
+
+header.sticky nav{
+display: none;
+}
+header.sticky .member li a{
+
+    float: left;
+}
+header.sticky nav{
+    text-indent: -9999em;
+}
+
+
+header .category label.sss{
+    background: url(../img/hamburger.png) no-repeat;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    /* margin-left: 10px; */
+    cursor: pointer;
+    z-index: 4;
+    margin-top: 20px;
+}
+.underheader {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    height: 65px;
+
+}
+.underheader li{
+    width: 1400px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.underheader li a{
+    display: block;
+    padding: 0 120.937496185px;
+    line-height: 65px;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.726);
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    /* cursor: pointer; */
+}
+
+.rightcontainer{
+    width: 1000px;
+    height: 100%;
+    position: fixed;
+    /* border: 1px solid black; */
+    /* margin: 0 auto; */
+    background-color: white;
+    top: 0;
+    left: -9999px;
+    transition: all .5s;
+    z-index: 5;
+}
+
+.rightcontainer .rightcategory{
+    display: flex;
+    height: 100%;
+    z-index: 5;
+}
+
+.rightcontainer .rightcategory .word{
+    /* border: 1px solid rgb(192, 39, 39); */
+    width: 150px;
+    height: 700px;
+    /* margin: 0 auto; */
+    margin-left: 50px;
+    margin-top: 60px;
+    /* background-color: rgb(147, 224, 226); */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.rightcontainer .rightcategory .word1{
+    width: 100px;
+    height: 700px;
+    margin-left: 50px;
+    margin-top: 60px;
+    /* background-color: rgb(147, 224, 226); */
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.word h1{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.word img{
+    /* padding-top: 10px; */
+    width: 35px;
+    margin-left: 15px;
+}
+.word p{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.word ul li{
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-left: 50px;
+}
+input#sideopen{
+    /* display: block; */
+    display: none;
+}
+input#sideopen:checked ~ .background{ 
+    opacity: 1;
+    visibility: visible;
+}
+input#sideopen:checked ~ .rightcontainer{
+    left:  0;
+}

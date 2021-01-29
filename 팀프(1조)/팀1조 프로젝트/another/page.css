@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+    float: left;
+}
+.header{
+    border: 1px solid rgb(0, 0, 0);
+    width: 1400px;
+    margin: 0 auto;
+    height: 65px;
+    margin-bottom: 5px;
+}
+.header h1{
+    float: left;
+    margin-top: 15.5px;
+}
+
+.search input{
+    float: left;
+    width: 600px;
+    height: 25px;
+    margin-top: 17px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.search img{
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 10px;
+}
+.member{
+    /* display: inline; */
+    width: 300px;
+    margin-left: 1100px;
+    float: right;
+    position: absolute;
+}
+.member li{
+    display: block;
+    float: right;
+}
+.member li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 65px;
+}
+.member li a:hover{
+    color: rgb(0, 168, 243);
+}
+
+
+.main{
+    padding: 5px;
+    border: 1px solid red;
+    width: 1400px;
+    margin: 0 auto;
+}
+.nav{
+    width: 100%;
+    height: 0;
+    /* border: 1px solid dodgerblue; */
+    /* line-height: 150px; */
+    margin: 0 auto 5px auto;
+    position: relative;
+    opacity: 0;
+    /* display: none; */
+    transition: 0.5s;
+    border-bottom: 1px solid gray;
+}
+.nav ul{
+    margin-left: 20px;
+}
+.nav li{
+    margin-top: 40px;
+    float: left;
+    /* width: 150px; */
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.nav li a{
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    position: relative;
+    /* border: 1px solid blue; */
+}
+.nav li a:before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    /* border: 1px solid red; */
+    background-color: crimson;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.nav li a:hover:before{
+    width: 100%;
+}
+.nav.sticky{
+    /* position: absolute; */
+    height: 80px;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 251, 251, 0.979);
+    transition: 0.5s;
+}
+
+
+
+.main .title{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.main textarea{
+    font-size: 24px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 10px;
+}
+.main textarea:focus{
+    border: 1px solid dodgerblue;
+}
+.main .file{
+    border: 1px solid crimson;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 50px;
+}
+.file input.upload{
+    display: inline-block;
+    height: 100px;
+    height: 100px;
+}
+.picture{
+    /* height: 300px; */
+    border: 1px solid rgb(155, 55, 55);
+    margin-bottom: 5px;
+    display: flex;
+    position: relative;
+}
+.attention{
+    /* height: 300px; */
+    border: 1px solid rgb(45, 148, 41);
+    margin-bottom: 5px;
+    display: flex;
+}
+.left{
+    font-size: 20px;
+    font-weight: bold;
+    /* border: 1px solid dodgerblue; */
+    padding: 10px;
+    margin: auto 10px;
+    /* background-color:  rgb(0, 168, 243); */
+    /* color: #ddd; */
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.right{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 50px;
+    border-radius: 10px;
+    /* border: 1px solid crimson; */
+    /* background-color:  rgb(0, 168, 243); */
+    width: 1100px;
+}
+#teacher_intro{
+    /* height: 300px; */
+    border: 1px solid rgb(74, 114, 167);
+    margin-bottom: 5px;
+    display: flex;
+}
+#class_intro{
+    /* height: 300px; */
+    border: 1px solid rgb(68, 33, 100);
+    margin-bottom: 5px;
+    display: flex;
+}
+#curri{
+    /* height: 300px; */
+    border: 1px solid rgb(146, 50, 109);
+    margin-bottom: 5px;
+    display: flex;
+}
+#review{
+    /* height: 300px; */
+    border: 1px solid rgb(163, 204, 68);
+    margin-bottom: 5px;
+    display: flex;
+    
+}
+.app{
+    /* height: 300px; */
+    width: 100%;
+    border: 1px solid rgb(20, 227, 241);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 100px;
+    align-items: center;
+}
+.app.str{
+    display: none;
+}
+.app .time{
+    border: 1px solid crimson;
+    padding: 10px;
+    margin-right: 10px;
+}
+.app .price{
+    border: 1px solid crimson;
+    padding: 10px;
+    margin-right: 10px;
+}
+.app .apply{
+    padding: 10px;
+    border: 1px solid crimson;
+}
+
+.date1{
+    border: 1px solid darkgreen;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.price1{
+    height: 100px;
+    border: 1px solid cornflowerblue;
+    margin-bottom: 10px;
+    display: flex;
+}
+.method{
+    height: 100px;
+    border: 1px solid lawngreen;
+    margin-bottom: 10px;
+    display: flex;
+}
+.button{
+    height: 100px;
+    border: 1px solid rgb(56, 28, 180);
+    margin-bottom: 10px;
+    /* display: flex; */
+    text-align: center;
+}
+.left1{
+    margin: 5px;
+    border: 1px solid crimson;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: auto 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right1{
+    height: 80px;
+    margin: 5px;
+    border: 1px solid rgb(89, 167, 160);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: auto 10px;
+    margin-left: 50px;
+    border-radius: 10px;
+    width: 1100px;
+    box-sizing: border-box;
+}
+.button input{
+    width: 100px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color:  rgb(0, 168, 243);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+.button input:hover{
+    background-color: darkblue;
+}
+footer{
+    margin-top: 5px;
+    border: 1px solid rgb(156, 154, 0);
+    height: 200px;
+}

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/Search.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/slidepart.css" >
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/slidepartscript.js"></script>
+    <script>
+        $(function(){
+            var win=$(window);
+            var headerTop=$('.search').offset().top;
+            win.scroll(function(){
+                if(win.scrollTop() > headerTop){
+                    $('header').addClass('sticky');
+                } else {
+                    $('header').removeClass('sticky');
+                }
+            })
+             $('.asidebtn, #jsimg').click(function(){
+                $('aside').toggleClass('open');
+                if($('aside').hasClass('open')){
+                    $('aside').stop().animate({right:0},500,'easeInQuad');
+                    $('.asidebtn').find('img').attr({'src':'img/xxx.png'});
+                }
+                else{
+                    $('aside').stop().animate({right:'-340px'},500,'easeOutQuad');
+                    $('.asidebtn').find('img').attr({'src':'img/free-icon-consulting-950781.png'});
+                }
+            });
+            $('.divimg').mouseover(function(){
+               
+               $(this).find('.clientimg').css({
+                   transform: 'scale(2)',
+                   transition: '0.7s'
+               });
+               })
+           .mouseout(function(){
+              
+               $(this).find('.clientimg').css({
+                   transform: 'scale(1)',
+                   transition: '0.7s'
+               });
+           });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="category">
+            <h1><a href="../mainpage/mainpage.html"><img src="img/logo1.png" alt=""/></a></h1>
+            <nav>
+            <ul>
+                <li><a href="../subpage/subpage1.html">어학</a></li>
+                <li><a href="../subpage/subpage1.html">기술</a> </li>
+                <li><a href="../subpage/subpage1.html">예술</a> </li>
+                <li><a href="../subpage/subpage1.html">Activity</a> </li>
+                <li><a href="../subpage/subpage1.html">기타</a> </li>
+            </ul>
+            </nav>
+            <div class="subsearch">
+                <input type="text" name="subsearch">
+                <a href="#"><img src="img/search.png"></a>
+            </div>
+            <div class="member">
+                <ul>
+                    <li><a href="../subpage/login.html">로그인</a></li>
+                    <li><a href="../subpage/register.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="searchimg">
+        <div class="search">
+            <div class="location">
+                <form>
+                    <h3>지역 선택</h3><br/>
+                    <select name="location">
+                        <option value="0">지역</option>
+                        <option value="1">서울</option>
+                        <option value="2">경기</option>
+                        <option value="3">인천</option>
+                        <option value="4">강원</option>
+                        <option value="5">전북</option>
+                        <option value="6">전남</option>
+                        <option value="7">대구</option>
+                        <option value="8">경북</option>
+                        <option value="9">경남</option>
+                        <option value="10">부산</option>
+                        <option value="11">제주</option>
+                    </select>
+                </form>
+            </div>
+            <div class="day"> 
+                <form>
+                    <h3>가능한 요일</h3><br/>
+                    <select name="day">
+                        <option value="0">요일</option>
+                        <option value="1">월</option>
+                        <option value="2">화</option>
+                        <option value="3">수</option>
+                        <option value="4">목</option>
+                        <option value="5">금</option>
+                        <option value="6">토</option>
+                        <option value="6">일</option>
+                    </select>
+                </form>
+            </div>
+            <div class="lesson">
+                <form>
+                    <h3>레슨형태</h3><br/>
+                    <select name="lesson">
+                        <option value="0">레슨형태</option>
+                        <option value="1">개인</option>
+                        <option value="2">단체</option>
+                        <option value="3">상관없음</option>
+                    </select>
+                </form>
+            </div>
+            <div class="searchbar">
+                <form><input type="search" name="search">
+                </form>
+                <a href="#"><img src="img/search.png"></a>
+            </div>
+        </div>    
+    </div>
+    <div class="slideshow">
+        <div class="slidepart">
+            <a href="" class="slide"><img src="img/slide-1.jpg" alt=""></a>
+            <a href="" class="slide"><img src="img/slide-2.jpg" alt=""></a>
+            <a href="" class="slide"><img src="img/slide-3.jpg" alt=""></a>
+            <a href="" class="slide"><img src="img/slide-4.jpg" alt=""></a>
+        </div>
+        <div class="slidebtn">
+            <a  class="prev btn">이전</a>
+            <a  class="next btn">다음</a>
+        </div>
+        <div class="slideindi">
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="inner">
+           
+            <section class="sec">
+                
+                <div class="btndiv">
+
+                    <button class="leftbtn"></button>
+                    <button class="rightbtn"></button>
+
+                    </div>
+
+                <div class="title">
+                    
+                    <h2 class="smalltitle">이번주의 인기작</h2>
+                    <h4 class="smalltitlesub">많은 사람들이 듣고 있는 강의</h4>
+                
+                </div>
+
+                <div class="maincontainer">
+                    
+                    <div class="mainslidewrap">
+                        
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdf</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                    </div>
+                    
+                </div>
+            </section>
+           
+
+            <section class="sec">
+                
+                <div class="btndiv">
+
+                    <button class="leftbtn"></button>
+                    <button class="rightbtn"></button>
+
+                    </div>
+
+                <div class="title">
+                    
+                    <h2 class="smalltitle">이번주의 인기작</h2>
+                    <h4 class="smalltitlesub">많은 사람들이 듣고 있는 강의</h4>
+                
+                </div>
+
+                <div class="maincontainer">
+                    
+                    <div class="mainslidewrap">
+                        
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdf</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            
+            <section class="sec">
+                
+                <div class="btndiv">
+
+                    <button class="leftbtn"></button>
+                    <button class="rightbtn"></button>
+
+                    </div>
+
+                <div class="title">
+                    
+                    <h2 class="smalltitle">이번주의 인기작</h2>
+                    <h4 class="smalltitlesub">많은 사람들이 듣고 있는 강의</h4>
+                
+                </div>
+
+                <div class="maincontainer">
+                    
+                    <div class="mainslidewrap">
+                        
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdf</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asd</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>asdfg</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                            <div class="content">
+                                <div class="divimg">
+                                    <img class="clientimg" src="./img/b.jpg">
+                                   </div>
+                                   <div class="smt">
+                                       <span>카테고리</span>
+                                       <span>•</span>
+                                       <span>작은 카테고리</span>
+                                   </div>
+                                  <div class="explain">
+                                     <p>여름에는 아이스크림이라면서 국밥에 아이스크림 넣어서 먹습니다. 
+                                          그런 대단한 위장을 만드는 법을 알려드립니다.</p>
+                                  </div>
+                                  <div class="money">
+                                     <div class="monmoney"><h5>월 55,000원(6개월)</h5></div>
+                                      <div class="Allmoney"><h1>총 330,000원</h1></div>
+                                  </div> 
+                            </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+    </div>
+ 
+
+
+
+
+
+    <aside id="jsaside">
+        <nav>
+            <div class="big">
+                <div class="small2">
+                </div>
+            <div class="small">
+            <p>
+                반갑습니다!<br/>
+                대부분의 문의는 서포트봇을 통해 확인<br/>
+                하실 수 있도록 준비해보았습니다.<br/>
+                <br/>
+                상담시간:평일 10:00~18:00<br/>
+            </p>
+            <button class="newcon"><a href="#"> 새 대화 시작</a></button>
+        </div>
+        </div>
+        </nav>
+        <div class="asidebtn"><img src="img/free-icon-consulting-950781.png" alt="open"></div>
+    </aside>
+
+    <footer>
+        <div class="container">
+            <h2 class="blind">스매시 서비스 소개 및 약관</h2>
+            <div class="ftop">
+                <ul class="fnav">
+                    <li class="first">
+                        <p class="title">COMPANY</p>
+                        <ul class="second">
+                            <li>블로그</li>
+                            <li>언론보도</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">POLICIES</p>
+                        <ul class="second">
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">SUPPORT</p>
+                        <ul class="second">
+                            <li>FAQ</li>
+                            <li>스매시센터</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">도움센터</p>
+                        <ul class="second">
+                            <li>전화번호</li>
+                            <li>팩스번호</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">스매시 CENTER</p>
+                        <ul class="second">
+                            <li><img id="jsimg" src="img/QnA.png"></li>
+                            <li>운영시간</li>
+                            <li>평일 10:00 ~ 17:00</li>
+                            <li>주말 10:00 ~ 14:00</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="fbottom">
+                <div class="finfo">
+                    <p>상호 : (주)스매시 | 주소 :대구광역시 동구 동부로 29 101동 109호 한국능력개발교육원 / 대표 : 정지운</p>
+                    <p>Copyright ⓒ2020 taling inc, ltd. All rights reserved</p>
+                    <p>전화 : XXXX - XXXX / 팩스 : XX - XXXX - XXXX </p>
+                </div>
+                <ul class="fsns">
+                    <li><a href="https://ko-kr.facebook.com/">페이스북</a></li>
+                    <li><a href="https://twitter.com/?lang=ko">트위터</a></li>
+                    <li><a href="https://www.youtube.com/">유튜브</a></li>
+                    <li><a href="https://www.google.com/">구글</a></li>
+                </ul>
+            </div>
+    </footer>
+    <script src="./js/mainslide.js"></script>
+    <!-- <script src="./js/aside.js"></script> -->
+</body>
+</html>

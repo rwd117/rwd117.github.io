@@ -1,0 +1,46 @@
+.main{
+    width: 100%;
+    box-sizing: border-box;
+}
+.mainwrap{
+    width: 1400px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.selectdiv{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 1300px;
+    height: 600px;
+}
+
+.selectdiv div{
+    width: 400px;
+    height: 400px;
+    float: left;
+    cursor: pointer;
+    margin: 100px 100px 20px 140px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 390px;
+    color: lightcyan;
+}
+
+.Newstudent{
+    background-color:  rgb(0, 168, 243);
+}
+
+.Newstudent:hover{
+    opacity: 0.8;
+    color: black;
+}
+
+.NewTeacher{
+    background-color:  rgb(0, 168, 243,0.5);
+}
+
+.NewTeacher:hover{
+    opacity: 0.8;
+    color: black;
+}

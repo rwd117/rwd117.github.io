@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.main{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 1600px;
+    height: 1400px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.check{
+    margin-top: 300px;
+    margin-left: 300px;
+    width: 1000px;
+    height: 800px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}

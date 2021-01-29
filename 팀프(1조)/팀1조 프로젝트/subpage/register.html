@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/subheader.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/regist.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    
+
+    <script>
+            $(function(){
+            var win=$(window);
+            var headerTop=$('header').offset().top;
+            win.scroll(function(){
+                if(win.scrollTop() > headerTop){
+                    $('header').addClass('sticky');
+                } else {
+                    $('header').removeClass('sticky');
+                }
+            })
+            $('.asidebtn, #jsimg').click(function(){
+                $('aside').toggleClass('open');
+                if($('aside').hasClass('open')){
+                    $('aside').stop().animate({right:0},500,'easeInQuad');
+                    $('.asidebtn').find('img').attr({'src':'img/xxx.png'});
+                }
+                else{
+                    $('aside').stop().animate({right:'-340px'},500,'easeOutQuad');
+                    $('.asidebtn').find('img').attr({'src':'img/free-icon-consulting-950781.png'});
+                }
+            });
+        
+        });
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="category">
+            <h1><a href="../mainpage/mainpage.html"><img src="img/logo1.png" alt=""/></a></h1>
+            <div class="subsearch">
+                <input type="text" name="subsearch">
+                <a href="#"><img src="img/search.png"></a>
+            </div>
+            <div class="member">
+                <ul>
+                    <li><a href="../subpage/login.html">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="underheader">
+        <ul>
+            <li class="MainMenu1"><a href="#">어학</a>
+            </li>
+            <li class="MainMenu2"><a href="#">기술</a>
+            </li>
+            <li class="MainMenu3"><a href="#">예술</a>
+            </li>
+            <li class="MainMenu4"><a href="#">Activity</a>
+            </li>
+            <li class="MainMenu5"><a href="#">기타</a>
+            </li>
+        </ul>
+    </div>
+    <div class="subcategory">
+        <div class="MMMenu">
+            <div class="MMenu1">
+                <div class="mmenu1">
+                    <li><a href="">한국어</a></li>
+                    <li><a href="">일어</a></li>
+                    <li><a href="">영어</a></li>
+                    <li><a href="">중국어</a></li>
+                    <li><a href="">스페인어</a></li>
+                </div>
+            </div>
+            <div class="MMenu2">
+                <div class="mmenu2">
+                    <li><a href="">JAVA</a></li>
+                    <li><a href="">C언어</a></li>
+                    <li><a href="">HTML,CSS</a></li>
+                    <li><a href="">기계</a></li>
+                </div>
+            </div>
+            <div class="MMenu3">
+                <div class="mmenu3">
+                    <li><a href="">패러글라이딩</a></li>
+                    <li><a href="">스카이다이빙</a></li>
+                    <li><a href="">축구</a></li>
+                    <li><a href="">야구</a></li>
+                    <li><a href="">볼링</a></li>
+                </div>
+            </div>
+            <div class="MMenu4">
+                <div class="mmenu4">
+                    <li><a href="">JAVA</a></li>
+                    <li><a href="">C언어</a></li>
+                    <li><a href="">HTML,CSS</a></li>
+                    <li><a href="">기계</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+      <div class="main">
+            <div class="maintitle">
+                 <img src="./img/logo1.png"><h1>의 학생으로</h1>
+            </div>
+            <h1> 회원가입</h1>
+            
+            <form method="POST">
+
+                <div class="member">
+                    <div class="labeldiv"><label for="membername">이름</label></div>
+                    <input type="text" id="membername" name="membername" placeholder="이름을 입력해주세요."> <br/>
+                    <i class="fa fa-user"></i>
+                </div>
+
+                <div class="member">
+                    <div class="labeldiv"><label for="memberid">아이디</label></div>
+                    <input type="text" id="memberid" name="memberid" maxlength="20" placeholder="아이디를 20자 내외로 입력해주세요"><br/>
+                    <i class="fa fa-id-card"></i>
+                </div>
+
+                <div class="member">
+                    <div class="labeldiv"> <label for="memberpwd">비밀번호</label></div>
+                    <input type="text" id="memberpwd" name="memberpwd" minlength="8" placeholder="비밀번호를 최소 8자이상으로 해주세요"><br/>
+                    <i class="fa fa-key"></i>
+                </div>
+                
+                <div class="member">
+                    <div class="labeldiv"> <label for="memberpwdcheck">비밀번호 확인</label></div>
+                    <input type="text" id="memberpwdcheck" name="memberpwdcheck" minlength="8" placeholder="비밀번호를 최소 8자이상으로 해주세요"><br/>
+                    <i class="fa fa-key"></i>
+                </div>
+               
+                <div class="member">
+                    <div class="labeldiv"><label for="memberemail">이메일</label></div>
+                    <input type="email" id="memberemail" name="memberemail" placeholder="ex)smash@example.com"><br/>
+                    <i class="fa fa-envelope"></i>
+                </div>
+                
+                <div class="member">
+
+                        <div class="labeldiv"><label >생년원일</label></div>
+                        <input type="text" id="yy" minlength="4" maxlength="4" placeholder="년(4자)">
+                   
+                  
+                            <select id="mm">
+                                <option>월</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>                                    
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                  
+                        <input type="text" id="dd" maxlength="2" maxlength="2" placeholder="일">
+                        <button>회원 가입</button>
+                        <button>취소</button>
+                    </div>
+
+
+            </form>
+      </div>
+
+    <aside>
+        <nav>
+            <div class="big">
+                <div class="small2">
+                </div>
+            <div class="small">
+            <p>
+                반갑습니다!<br/>
+                대부분의 문의는 서포트봇을 통해 확인<br/>
+                하실 수 있도록 준비해보았습니다.<br/>
+                <br/>
+                상담시간:평일 10:00~18:00<br/>
+            </p>
+            <button class="newcon"><a href="#"> 새 대화 시작</a></button>
+        </div>
+        </div>
+        </nav>
+        <div class="asidebtn"><img src="img/free-icon-consulting-950781.png" alt="open"></div>
+    </aside>
+
+    <footer>
+        <div class="container">
+            <h2 class="blind">스매시 서비스 소개 및 약관</h2>
+            <div class="ftop">
+                <ul class="fnav">
+                    <li class="first">
+                        <p class="title">COMPANY</p>
+                        <ul class="second">
+                            <li>블로그</li>
+                            <li>언론보도</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">POLICIES</p>
+                        <ul class="second">
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">SUPPORT</p>
+                        <ul class="second">
+                            <li>FAQ</li>
+                            <li>스매시센터</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">도움센터</p>
+                        <ul class="second">
+                            <li>전화번호</li>
+                            <li>팩스번호</li>
+                        </ul>
+                    </li>
+                    <li class="first">
+                        <p class="title">스매시 CENTER</p>
+                        <ul class="second">
+                            <li><img id="jsimg" src="img/QnA.png"></li>
+                            <li>운영시간</li>
+                            <li>평일 10:00 ~ 17:00</li>
+                            <li>주말 10:00 ~ 14:00</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="fbottom">
+                <div class="finfo">
+                    <p>상호 : (주)스매시 | 주소 :대구광역시 동구 동부로 29 101동 109호 한국능력개발교육원 / 대표 : 정지운</p>
+                    <p>Copyright ⓒ2020 taling inc, ltd. All rights reserved</p>
+                    <p>전화 : XXXX - XXXX / 팩스 : XX - XXXX - XXXX </p>
+                </div>
+                <ul class="fsns">
+                    <li><a href="https://ko-kr.facebook.com/">페이스북</a></li>
+                    <li><a href="https://twitter.com/?lang=ko">트위터</a></li>
+                    <li><a href="https://www.youtube.com/">유튜브</a></li>
+                    <li><a href="https://www.google.com/">구글</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
